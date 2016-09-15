@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Submitted Info</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/bootstrap.min.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/bootstrap-theme.min.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/main.css') }}">
+    <script type="text/javascript" src="{{ url_for('static', filename='js/modernizr-2.8.3.min.js') }}"></script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="jumbotron">
+            <h1>Submitted info:</h1>
+            <p>
+                Name: {{session['name']}}
+            </p>
+            <p>
+                Location: {{session['location']}}
+            </p>
+            <p>
+                Favorite Language:{{session['language']}}
+            </p>
+            <p>
+                Comment: {{session['comment']}}
+            </p>
+            <form action="/">
+                <div class="form-group">
+                    <button class="btn btn-default">Go Back</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <script type="text/javascript" src="{{ url_for('static', filename='js/jquery-1.11.2.js') }}"></script>
+    <script type="text/javascript" src="{{ url_for('static', filename='js/bootstrap.min.js') }}"></script>
+</body>
+
+</html>
